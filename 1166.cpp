@@ -1,23 +1,21 @@
 #if 0
-//RUNING ERROR
+//AC
 #include <iostream>
 #include <cstdio>
 #include <cstring>
 
 using namespace std;
-const int maxn=50005;
+const int maxn=50010;
 struct Node{
     int left;
     int right;
     int cnt;
 };
-Node node[4*maxn];
+Node node[3*maxn];
 int num[maxn];
 
 void mupdate(int r,int pos,int val)
 {
-    if(r>=4*maxn)
-        return ;
     if(node[r].left==pos&&node[r].right==node[r].left)
     {
         node[r].cnt=val;
@@ -34,8 +32,6 @@ void mupdate(int r,int pos,int val)
 
 int mquery(int root,int i,int j)
 {
-     if(root>=4*maxn)
-        return 0;
     if(node[root].left>=i&&node[root].right<=j)
         return node[root].cnt;
     int ret=0,mid;
@@ -49,8 +45,6 @@ int mquery(int root,int i,int j)
 
 void mbuild(int root,int l,int r)
 {
-     if(root>=4*maxn||l>=maxn)
-        return ;
     node[root].left=l;
     node[root].right=r;
     if(l==r)
@@ -77,8 +71,8 @@ int main()
         for(int j=1;j<=n;j++)
             scanf("%d",&num[j]);
         mbuild(1,1,n);
-        char cmd[10];
-        while(scanf("%s",cmd)!=EOF&&strcmp(cmd,"END")!=0)
+        char cmd[20];
+        while(scanf("%s",cmd)!=EOF&&strcmp(cmd,"End")!=0)
         {
             int a,b;
             scanf("%d%d",&a,&b);
