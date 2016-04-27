@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1461739099 source:c:\users\coderex2522\gitproject\hduoj\1166.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+
+1461738804 source:c:\users\coderex2522\gitproject\hduoj\1166_1.cpp
+
+1461742479 source:c:\users\coderex2522\gitproject\hduoj\1754.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+
